@@ -1,0 +1,207 @@
+body {
+    position: relative;
+    margin: 0.5em 4em;
+    max-width: 50em;
+
+    font-family: Futura, Futura-Medium, "Futura Medium", "Open Sans", OpenSans, "Century Gothic", CenturyGothic, "Apple Gothic", AppleGothic, "URW Gothic L", "Avant Garde", sans-serif;
+    font-size: 10pt;
+}
+
+#toc {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #eee;
+  margin: 0;
+  border: 1px dotted black;
+}
+
+#toc > p.first {
+    display: block;
+    padding: 0.5em;
+    margin: 0;
+    float: right;
+}
+
+#toc ul {
+  padding: 0.5em 1em 0 1em;
+  margin: 0;
+  list-style-type: none;
+}
+
+#toc a {
+  text-decoration: none;
+  color: black;
+}
+
+#toc a:hover {
+  color: darkgrey;
+}
+
+#toc > ul {
+  display: none;
+  padding: 0.5em 1em 0 1em;
+  height: 45em;
+  overflow: scroll;
+}
+
+#toc:hover > ul {
+  display: block;
+}
+
+#toc > ul > li > a {
+  display: none;
+}
+
+#toc ul ul li > a {
+  font-size: 1.3em;
+}
+
+#toc ul ul ul li > a {
+  font-size: 1em;
+}
+
+.document > .section:before {
+  content: "";
+  display: block;
+  width: 10em;
+
+  border-top: 3px solid black;
+  margin-top: 5em;
+  margin-left: auto;
+}
+
+.document > .section:first-child:before {
+  display: none;
+}
+
+h1.title {
+  font-size: 6em;
+  text-align: center;
+}
+
+h1.title + p {
+  text-align: center;
+  font-style: italic;
+}
+
+pre.literal-block {
+  white-space: normal;
+}
+
+pre.literal-block.code {
+  white-space: pre-wrap;
+  margin: 0.5em 1em;
+  padding: 1em;
+}
+
+h1, h2 {
+  font-size: 28pt;
+  text-align: right;
+}
+
+h3 {
+  margin-top: 2em;
+  font-size: 14pt;
+}
+
+blockquote.highlights {
+  border: 1px solid black;
+  padding: 1em 2em;
+}
+
+div.container {
+  margin: 1em 2em;
+  padding: 1.2em 2em;
+  position: relative;
+}
+
+div.container.todo {
+  background-color: lightcoral;
+}
+
+div.container.question {
+  background-color: lightblue;
+}
+
+div.container:before {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  font-weight: bold;
+}
+
+div.container.todo:before {
+  content: "TODO";
+}
+
+div.container.question:before {
+  content: "QUESTION";
+}
+
+em {
+  color: #FF00FF;
+}
+
+span.key {
+  color:  #00CCCC;
+  font-style: italic;
+}
+
+span.screen {
+  color: #00AA00;
+  font-weight: bold;
+}
+
+span.url {
+  text-decoration: underline;
+  color: rgb(85, 26, 139);
+}
+
+div.footer {
+  position: fixed;
+  top: 0;
+  left: 48em;
+  padding: 1em;
+  background-color: white;
+  border: 1px dotted black;
+}
+
+div.footer hr {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: 21.5cm 27.9cm portrait;
+    margin: 3.8cm 4.1cm;
+  }
+
+  .document > .section:before {
+    display: none;
+  }
+
+  #toc,
+  footer,
+  #packt-rst-cheatsheet {
+    display: none;
+  }
+
+  blockquote,
+  pre.literal-block {
+    page-break-inside: avoid;
+  }
+
+  h1 {
+    page-break-before: always;
+  }
+
+  h1.title {
+    margin-top: 8cm;
+  }
+
+  h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}

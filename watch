@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PWD=$(realpath $(dirname $0))
+cd $PWD
+
+browser-sync start --server "$PWD/dist/" --files "$PWD/dist/*.html" --index document.html &
+
+inotifywait -m -e create,modify,close_write,move,delete -r $PWD/*.rst $PWD/src/ $PWD/rst2packt/ |
+while read -r  directory events filename; do
+    echo -e "\tCompiling HTML due to change on $directory$filename"
+    make -s html
+done
