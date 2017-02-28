@@ -14,7 +14,7 @@ If you want more information about the writing process itself, you can have a
 look at the blog post I wrote: [Writing a book: Functional PHP](blog).
 
 [book]: https://www.packtpub.com/application-development/functional-php
-[blog]: http://gilles.crettenand.info/blog/programming/2017/23/02/Writing-a-book
+[blog]: http://gilles.crettenand.info/blog/programming/2017/02/28/Writing-a-book
 
 ## Disclaimer
 
