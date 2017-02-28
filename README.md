@@ -8,10 +8,10 @@ The book starts with a gentle introduction to functional programming and present
 the related concepts in PHP. More advanced topics like function composition,
 functors, applicative, and monads are also discussed. Functional programming is
 also presented through the lense of performance and testing.
-You can find more information on the dedicated webpage: [Functional PHP](book).
+You can find more information on the dedicated webpage: [Functional PHP][book].
 
 If you want more information about the writing process itself, you can have a
-look at the blog post I wrote: [Writing a book: Functional PHP](blog).
+look at the blog post I wrote: [Writing a book: Functional PHP][blog].
 
 [book]: https://www.packtpub.com/application-development/functional-php
 [blog]: http://gilles.crettenand.info/blog/programming/2017/02/28/Writing-a-book
@@ -82,7 +82,7 @@ There is also a `watch` script that you can run. It will watch for any changes i
 
 ## Issues and contributions
 
-If you find any issues, I urge you to use the [bugtracker](bugs). Since my book
+If you find any issues, I urge you to use the [bugtracker][bugs]. Since my book
 is now published, I make no promise to fix those for you, but I will try my best.
 Pull requests are also welcome.
 
